@@ -519,7 +519,7 @@ const projects: Record<string, Project> = {
           </a>
         </figure>
 
-        <ol start="4">
+        <ol start={4}>
           <li>
             Drag <span className="highlight-conjunctions">and</span> drop the &ldquo;Samples&rdquo; folder{' '}
             <span className="highlight-prepositions">from</span> the &ldquo;Orderly Anarchy Emerges&rdquo; folder{' '}
