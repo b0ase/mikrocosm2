@@ -464,39 +464,143 @@ const projects: Record<string, Project> = {
   'creative-coding-ii': {
     id: 'creative-coding-ii',
     title: 'Workshops In Creative Coding II: All Space-Time in a Knotshell',
-    date: '2013-12-18T21:32:56+00:00',
+    date: '2014-05-13T00:00:00+00:00',
     content: (
       <div className="entry-content">
         <p><strong>Introduction</strong></p>
 
         <p>
-          <span className="highlight-pronouns">This</span> advanced workshop explores{' '}
-          <span className="highlight-prepositions">the</span> concept <span className="highlight-prepositions">of</span>{' '}
-          space-time through computational art <span className="highlight-conjunctions">and</span>{' '}
-          creative coding techniques.
+          The creative goal <span className="highlight-prepositions">of</span>{' '}
+          <span className="highlight-pronouns">this</span> project was an attempt{' '}
+          <span className="highlight-prepositions">to</span> tie together a number{' '}
+          <span className="highlight-prepositions">of</span> themes that are{' '}
+          <span className="highlight-prepositions">of</span> interest{' '}
+          <span className="highlight-prepositions">to</span> me, <span className="highlight-conjunctions">and</span>{' '}
+          <span className="highlight-prepositions">to</span> use some{' '}
+          <span className="highlight-prepositions">of</span> the physical computing skills{' '}
+          that I have been learning <span className="highlight-prepositions">to</span> create{' '}
+          an installation that would hopefully be beautiful{' '}
+          <span className="highlight-conjunctions">and</span> engaging.
+        </p>
+
+        <p>
+          The main theme <span className="highlight-prepositions">in</span>{' '}
+          <span className="highlight-pronouns">this</span> project relates{' '}
+          <span className="highlight-prepositions">to</span> an ongoing interest{' '}
+          <span className="highlight-prepositions">of</span> mine{' '}
+          <span className="highlight-prepositions">into</span> the nature{' '}
+          <span className="highlight-prepositions">of</span> time,{' '}
+          <span className="highlight-conjunctions">and</span> it&rsquo;s connection{' '}
+          <span className="highlight-prepositions">to</span> the ancient Chinese system{' '}
+          <span className="highlight-prepositions">of</span> divination the I Ching.{' '}
+          A strongly interrelated theme here is an interest{' '}
+          <span className="highlight-prepositions">in</span> systems{' '}
+          <span className="highlight-pronouns">which</span> mimic the functioning{' '}
+          <span className="highlight-prepositions">of</span> autotrophic organisms.{' '}
+          <span className="highlight-pronouns">These</span> are organisms{' '}
+          <span className="highlight-pronouns">which</span> nourish themselves, thus systems{' '}
+          <span className="highlight-pronouns">which</span> mimic their functioning will involve{' '}
+          some sort <span className="highlight-prepositions">of</span> iterative feedback loop{' '}
+          <span className="highlight-prepositions">to</span> form a sort{' '}
+          <span className="highlight-prepositions">of</span> auto-catalytic, self-reinforcing process.{' '}
+          I became interested <span className="highlight-prepositions">in</span>{' '}
+          <span className="highlight-pronouns">this</span> idea{' '}
+          <span className="highlight-prepositions">after</span> seeing{' '}
+          &lsquo;Talysis II, Autotrophs&rsquo;{' '}
+          <span className="highlight-prepositions">by</span> Paul Prudence{' '}
+          <span className="highlight-prepositions">in</span> the book{' '}
+          &lsquo;Generative Design&rsquo;{' '}
+          <span className="highlight-prepositions">by</span> Bohnacker et al. (page 104-107).
+        </p>
+
+        <div className="wp-block-embed__wrapper">
+          <iframe src="https://player.vimeo.com/video/4489263" width="640" height="360" frameBorder="0" allowFullScreen></iframe>
+          <p>Talysis II from Paul Prudence on Vimeo.</p>
+        </div>
+
+        <p>
+          <span className="highlight-prepositions">To</span> understand how autotrophism relates{' '}
+          <span className="highlight-prepositions">to</span> theories{' '}
+          <span className="highlight-prepositions">of</span> time,{' '}
+          <span className="highlight-conjunctions">or</span> more specifically non-western theories{' '}
+          <span className="highlight-prepositions">of</span> time{' '}
+          <span className="highlight-pronouns">where</span> time is considered{' '}
+          <span className="highlight-prepositions">to</span> be cyclical, consider the picture below{' '}
+          <span className="highlight-prepositions">of</span> the Ouroboros.
         </p>
 
         <figure className="wp-block-image">
-          <a href="/images/timewave-theory-king-wen-sequence-hexagrams-iching.jpg" target="_blank">
-            <img src="/images/timewave-theory-king-wen-sequence-hexagrams-iching.jpg" alt="Timewave Theory" />
+          <a href="/images/Serpiente_alquimica.jpg" target="_blank">
+            <img src="/images/Serpiente_alquimica.jpg" alt="Serpiente_alquimica" />
           </a>
+          <figcaption>
+            (Figure 1: The Ouroboros, Drawing <span className="highlight-prepositions">by</span> Theodoros Pelecanos,{' '}
+            <span className="highlight-prepositions">in</span> the alchemical tract <em>Synosius</em> (1478).<br />
+            &ldquo;The Ouroboros often symbolizes self-reflexivity{' '}
+            <span className="highlight-conjunctions">or</span> cyclicality, especially{' '}
+            <span className="highlight-prepositions">in</span> the sense{' '}
+            <span className="highlight-prepositions">of</span> something constantly re-creating itself, the eternal return&hellip;&rdquo;{' '}
+            Source; wikipedia.org)
+          </figcaption>
         </figure>
 
         <p>
-          The project investigates temporal patterns, complexity theory,{' '}
-          <span className="highlight-conjunctions">and</span> the mathematical structures{' '}
-          underlying <span className="highlight-pronouns">our</span> perception{' '}
-          <span className="highlight-prepositions">of</span> time <span className="highlight-conjunctions">and</span> space.
+          The western scientific view <span className="highlight-prepositions">of</span> time{' '}
+          <span className="highlight-prepositions">as</span> a smooth surface,{' '}
+          <span className="highlight-pronouns">where</span>{' '}
+          <span className="highlight-pronouns">this</span> moment is just{' '}
+          <span className="highlight-prepositions">like</span> the one{' '}
+          <span className="highlight-prepositions">before</span> it,{' '}
+          <span className="highlight-conjunctions">and</span> just{' '}
+          <span className="highlight-prepositions">like</span> the one{' '}
+          <span className="highlight-prepositions">about</span>{' '}
+          <span className="highlight-prepositions">to</span> occur, is an idea{' '}
+          that <span className="highlight-pronouns">this</span> project aims{' '}
+          <span className="highlight-prepositions">to</span> challenge.
         </p>
 
-        <p><strong>Conceptual Framework</strong></p>
+        <p><strong>The System</strong></p>
+
+        <p><strong>Overview</strong></p>
+
+        <figure className="wp-block-image">
+          <a href="/images/wen-mandala-8-bw.jpg" target="_blank">
+            <img src="/images/wen-mandala-8-bw.jpg" alt="System Overview" />
+          </a>
+          <figcaption>(Figure 2: System Overview.)</figcaption>
+        </figure>
 
         <p>
-          Drawing inspiration <span className="highlight-prepositions">from</span> various fields{' '}
-          including mathematics, physics, <span className="highlight-conjunctions">and</span>{' '}
-          philosophy, <span className="highlight-pronouns">this</span> work attempts{' '}
-          <span className="highlight-prepositions">to</span> visualize complex temporal relationships.
+          My explanation <span className="highlight-prepositions">of</span> how the system works will begin{' '}
+          <span className="highlight-prepositions">with</span> the electromagnetic interference (EMI) detector.{' '}
+          EMI is a form <span className="highlight-prepositions">of</span> electromagnetic radiation,{' '}
+          <span className="highlight-pronouns">this</span> is a combination{' '}
+          <span className="highlight-prepositions">of</span> electrical{' '}
+          <span className="highlight-conjunctions">and</span> magnetic waves travelling outward{' '}
+          <span className="highlight-prepositions">from</span> anywhere that an electrical power signal is changing{' '}
+          <span className="highlight-conjunctions">or</span> being turned off{' '}
+          <span className="highlight-conjunctions">and</span>{' '}
+          <span className="highlight-prepositions">on</span> rapidly. The antenna{' '}
+          <span className="highlight-prepositions">for</span> detecting EMI here is simply{' '}
+          a 3 foot length <span className="highlight-prepositions">of</span> solid core wire, connected{' '}
+          <span className="highlight-prepositions">to</span> an analogue pin{' '}
+          <span className="highlight-prepositions">of</span> Arduino 1,{' '}
+          <span className="highlight-prepositions">via</span> an LM386 amplifier chip circuit.
         </p>
+
+        <figure className="wp-block-image">
+          <a href="/images/EMIsensor_bb1.jpg" target="_blank">
+            <img src="/images/EMIsensor_bb1.jpg" alt="EMI detector breadboard view" />
+          </a>
+          <figcaption>(Figure 3: EMI detector, breadboard view. Signal amplified <span className="highlight-prepositions">with</span> LM386 amplifier chip.)</figcaption>
+        </figure>
+
+        <figure className="wp-block-image">
+          <a href="/images/LM386ampschematic.jpg" target="_blank">
+            <img src="/images/LM386ampschematic.jpg" alt="EMI detector schematic view" />
+          </a>
+          <figcaption>(Figure 4: EMI detector, schematic view. Signal amplified <span className="highlight-prepositions">with</span> LM386 amplifier chip.)</figcaption>
+        </figure>
       </div>
     ),
     prevProject: { id: 'i-ching-turntable', title: 'Physical Computing: The I Ching Turntable' }
