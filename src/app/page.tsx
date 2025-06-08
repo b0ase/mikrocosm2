@@ -1,103 +1,85 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const projects = [
+    {
+      id: 'drum-machine',
+      title: 'Workshops In Creative Coding Project: Drum Machine',
+      date: 'December 18, 2013',
+      excerpt: 'A software emulator of an Elektron Machinedrum using Max and OpenFrameworks.',
+      image: '/images/Elektron-MachineDrum-SPS1-2.jpg'
+    },
+    {
+      id: 'orderly-anarchy',
+      title: 'Advanced AV Processing: Orderly Anarchy Emerges',
+      date: 'December 18, 2013',
+      excerpt: 'An audio-visual experiment using random patterns and Processing.',
+      image: '/images/OAE.jpg'
+    },
+    {
+      id: 'i-ching-turntable',
+      title: 'Physical Computing: The I Ching Turntable',
+      date: 'December 18, 2013',
+      excerpt: 'A physical computing project combining the I Ching with turntable technology.',
+      image: '/images/IChingTurntable_bb.jpg'
+    },
+    {
+      id: 'creative-coding-ii',
+      title: 'Workshops In Creative Coding II: All Space-Time in a Knotshell',
+      date: 'December 18, 2013',
+      excerpt: 'Advanced creative coding workshop exploring space-time concepts.',
+      image: '/images/timewave-theory-king-wen-sequence-hexagrams-iching.jpg'
+    }
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div>
+      <header className="entry-header">
+        <h1 className="entry-title">Mikrocosm</h1>
+        <div className="entry-meta">
+          <span>Projects, both finished and half fini…</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
+
+      <div className="entry-content">
+        <p>
+          Welcome to Mikrocosm, a collection of creative coding projects, physical computing experiments, 
+          and audio-visual explorations. Each project represents a journey into the intersection of 
+          technology, art, and creative expression.
+        </p>
+
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <article key={project.id} className="project-item">
+              <header className="project-header">
+                <h2 className="project-title">
+                  <Link href={`/projects/${project.id}`}>
+                    {project.title}
+                  </Link>
+                </h2>
+                <div className="project-meta">
+                  <time className="project-date">{project.date}</time>
+                </div>
+              </header>
+              
+              {project.image && (
+                <div className="project-image">
+                  <Link href={`/projects/${project.id}`}>
+                    <img src={project.image} alt={project.title} />
+                  </Link>
+                </div>
+              )}
+              
+              <div className="project-content">
+                <p>{project.excerpt}</p>
+                <Link href={`/projects/${project.id}`} className="read-more">
+                  Read more →
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
