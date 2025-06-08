@@ -601,6 +601,210 @@ const projects: Record<string, Project> = {
           </a>
           <figcaption>(Figure 4: EMI detector, schematic view. Signal amplified <span className="highlight-prepositions">with</span> LM386 amplifier chip.)</figcaption>
         </figure>
+
+        <p>
+          The system is listening <span className="highlight-prepositions">for</span> electromagnetic energy being emitted{' '}
+          <span className="highlight-prepositions">from</span> various electronic devices{' '}
+          <span className="highlight-prepositions">in</span> the local environment. Sometimes, an electrical device{' '}
+          that has the potential <span className="highlight-prepositions">to</span> give{' '}
+          <span className="highlight-prepositions">off</span> EMI is shielded{' '}
+          <span className="highlight-prepositions">to</span> prevent interference{' '}
+          <span className="highlight-prepositions">from</span> escaping; however a great many devices{' '}
+          that emit EMI are shielded very lightly{' '}
+          <span className="highlight-conjunctions">or</span> not{' '}
+          <span className="highlight-prepositions">at</span> all.
+        </p>
+
+        <p>
+          One unexpected autotrophic element <span className="highlight-prepositions">of</span>{' '}
+          <span className="highlight-pronouns">this</span> system became apparent{' '}
+          <span className="highlight-pronouns">when</span> I later added a servo motor right next{' '}
+          <span className="highlight-prepositions">to</span> the wire antenna{' '}
+          <span className="highlight-prepositions">of</span> the EMI detector. The values being read{' '}
+          <span className="highlight-prepositions">by</span> the EMI detector determine{' '}
+          <span className="highlight-pronouns">whether</span>{' '}
+          <span className="highlight-conjunctions">or</span> not the servo should move,{' '}
+          <span className="highlight-conjunctions">and</span>{' '}
+          <span className="highlight-pronouns">if</span> so{' '}
+          <span className="highlight-pronouns">where</span>. But every time the servo motor moves{' '}
+          <span className="highlight-pronouns">this</span> creates a clearly perceptible change{' '}
+          <span className="highlight-prepositions">in</span> the EMI detected,{' '}
+          <span className="highlight-pronouns">this</span> was apparent{' '}
+          <span className="highlight-prepositions">by</span> either looking{' '}
+          <span className="highlight-prepositions">at</span> the values being read{' '}
+          <span className="highlight-prepositions">by</span> the analogue pin{' '}
+          <span className="highlight-prepositions">on</span> Arduino 1,{' '}
+          <span className="highlight-conjunctions">or</span> just listening{' '}
+          <span className="highlight-prepositions">to</span> the tone being generated{' '}
+          <span className="highlight-prepositions">out</span>{' '}
+          <span className="highlight-prepositions">of</span> digital pin 11{' '}
+          <span className="highlight-prepositions">on</span> Arduino 1 (see figures 5{' '}
+          <span className="highlight-conjunctions">and</span> 6), using the code below;
+        </p>
+
+        <pre><code>{`void loop() {
+
+  int analIP = analogRead(aPiNoise);
+  showDiag=0;
+  if (minNoise>analIP) { minNoise=analIP; showDiag=0; }    
+  if (maxNoise<analIP) { maxNoise=analIP; showDiag=0; }    
+  if (opct < 1050 && showDiag) {     Serial.print(" no: "); Serial.print(minNoise); Serial.print(" "); Serial.print(maxNoise);     if (++opct % 12 != 0) Serial.print(" "); else Serial.println("");   }   if (abs(currAnal-analIP)>10) {
+    currAnal=analIP;
+    totAnal += currAnal;
+    
+    if (muteState) 
+      noTone(spkrPin);
+    else
+      tone(spkrPin, map(currAnal, minNoise, maxNoise, 30, 10000), 200);  // pin, Hz, mS
+
+  }`}</code></pre>
+
+        <figure className="wp-block-image">
+          <a href="/images/speaker_bb.jpg" target="_blank">
+            <img src="/images/speaker_bb.jpg" alt="Speaker and amplifier breadboard view" />
+          </a>
+          <figcaption>(Figure 5: Speaker <span className="highlight-conjunctions">and</span> amplifier, breadboard view. Signal amplified <span className="highlight-prepositions">with</span> LM386 amplifier chip.)</figcaption>
+        </figure>
+
+        <figure className="wp-block-image">
+          <a href="/images/LM386ampschematic.jpg" target="_blank">
+            <img src="/images/LM386ampschematic.jpg" alt="Speaker and amplifier schematic view" />
+          </a>
+          <figcaption>(Figure 6: Speaker <span className="highlight-conjunctions">and</span> amplifier, schematic view. Signal amplified <span className="highlight-prepositions">with</span> LM386 amplifier chip.)</figcaption>
+        </figure>
+
+        <p>
+          The EMI values being read <span className="highlight-prepositions">by</span> Arduino 1{' '}
+          <span className="highlight-prepositions">on</span> analogue pin 5 are used{' '}
+          <span className="highlight-prepositions">to</span> generate the lines{' '}
+          (<span className="highlight-conjunctions">or</span> yao){' '}
+          <span className="highlight-prepositions">of</span> an I Ching hexagram.{' '}
+          <span className="highlight-prepositions">Before</span> I explain how{' '}
+          <span className="highlight-pronouns">this</span> is done, I will first describe one{' '}
+          <span className="highlight-prepositions">of</span> the traditional methods{' '}
+          <span className="highlight-prepositions">for</span> casting the I Ching; the throwing{' '}
+          <span className="highlight-prepositions">of</span> three coins. The lines{' '}
+          <span className="highlight-prepositions">of</span> an I Ching hexagram are either;
+        </p>
+
+        <ul>
+          <li>Old Yin (—X—)</li>
+          <li>Young Yang (———)</li>
+          <li>Young Yin (— —)</li>
+          <li>Old Yang (—θ—)</li>
+        </ul>
+
+        <p>
+          <span className="highlight-prepositions">For</span> the three coins method,{' '}
+          <span className="highlight-pronouns">we</span> give the lines the following values;
+        </p>
+
+        <ul>
+          <li>6 = Old Yin (—X—)</li>
+          <li>7 = Young Yang (———)</li>
+          <li>8 = Young Yin (— —)</li>
+          <li>9 = Old Yang (—θ—)</li>
+        </ul>
+
+        <p>
+          <span className="highlight-conjunctions">And</span>{' '}
+          <span className="highlight-pronouns">we</span> say that a tails = 2,{' '}
+          <span className="highlight-conjunctions">and</span> heads = 3. Then{' '}
+          <span className="highlight-pronouns">when</span> throwing three coins;
+        </p>
+
+        <ul>
+          <li>Three tails = 6 = Old Yin (—X—)</li>
+          <li>Two tails <span className="highlight-conjunctions">and</span> one head = 7 = Young Yang (———)</li>
+          <li>Two heads <span className="highlight-conjunctions">and</span> one tail = 8 = Young Yin (— —)</li>
+          <li>Three heads = 9 = Old Yang (—θ—)</li>
+        </ul>
+
+        <p>
+          Thus there is a 1/8 chance <span className="highlight-prepositions">of</span> throwing a 6,{' '}
+          a 1/8 chance <span className="highlight-prepositions">of</span> throwing a 9,{' '}
+          a 3/8 chance <span className="highlight-prepositions">of</span> throwing a 7,{' '}
+          <span className="highlight-conjunctions">and</span> a 3/8 chance{' '}
+          <span className="highlight-prepositions">of</span> throwing an 8.
+        </p>
+
+        <p>
+          <span className="highlight-pronouns">What</span>{' '}
+          <span className="highlight-pronouns">we</span> have streaming{' '}
+          <span className="highlight-prepositions">from</span>{' '}
+          <span className="highlight-pronouns">our</span> EMI detector is a constant flow{' '}
+          <span className="highlight-prepositions">of</span> noise data (values{' '}
+          <span className="highlight-prepositions">between</span> 0{' '}
+          <span className="highlight-conjunctions">and</span> 1023).{' '}
+          <span className="highlight-prepositions">To</span> replicate the throwing{' '}
+          <span className="highlight-prepositions">of</span> three coins{' '}
+          <span className="highlight-pronouns">we</span> take the values being read{' '}
+          <span className="highlight-prepositions">by</span> the EMI detector{' '}
+          <span className="highlight-conjunctions">and</span> sum them every time the value changes{' '}
+          <span className="highlight-prepositions">by</span> 10{' '}
+          <span className="highlight-conjunctions">or</span> more.
+        </p>
+
+        <figure className="wp-block-image">
+          <a href="/images/timewave-theory-king-wen-sequence-hexagrams-iching.jpg" target="_blank">
+            <img src="/images/timewave-theory-king-wen-sequence-hexagrams-iching.jpg" alt="King Wen Sequence" />
+          </a>
+          <figcaption>(Figure 9: The King Wen Sequence. Source; http://fractalenlightenment.com/14061/enlightening-video/mckenna-and-bradens-fractal-nature-of-time)</figcaption>
+        </figure>
+
+        <figure className="wp-block-image">
+          <a href="/images/145139.jpg" target="_blank">
+            <img src="/images/145139.jpg" alt="Project setup photo 1" />
+          </a>
+        </figure>
+
+        <figure className="wp-block-image">
+          <a href="/images/145140.jpg" target="_blank">
+            <img src="/images/145140.jpg" alt="Project setup photo 2" />
+          </a>
+        </figure>
+
+        <figure className="wp-block-image">
+          <a href="/images/145142.jpg" target="_blank">
+            <img src="/images/145142.jpg" alt="Project setup photo 3" />
+          </a>
+        </figure>
+
+        <figure className="wp-block-image">
+          <a href="/images/145143.jpg" target="_blank">
+            <img src="/images/145143.jpg" alt="Project setup photo 4" />
+          </a>
+        </figure>
+
+        <div className="wp-block-embed__wrapper">
+          <iframe src="https://player.vimeo.com/video/92886069" width="640" height="360" frameBorder="0" allowFullScreen></iframe>
+          <p>Workshops In Creative Coding 2 Project Demo from George Haworth on Vimeo.</p>
+        </div>
+
+        <p>
+          The great work continues&hellip;
+        </p>
+
+        <p><strong>Source Code</strong></p>
+
+        <ul>
+          <li>Arduino sketch running <span className="highlight-prepositions">on</span> Arduino 1 is found here.</li>
+          <li>Arduino sketch running <span className="highlight-prepositions">on</span> Arduino 2 is found here.</li>
+          <li>Processing sketch running <span className="highlight-prepositions">on</span> Beagleboard xM is found here.</li>
+          <li>Processing sketch running <span className="highlight-prepositions">on</span> PC is found here.</li>
+        </ul>
+
+        <p><strong>References <span className="highlight-conjunctions">and</span> Acknowledgements</strong></p>
+
+        <ul>
+          <li>&lsquo;Talysis II, Autotrophs&rsquo; <span className="highlight-prepositions">by</span> Paul Prudence taken <span className="highlight-prepositions">from</span> the book &lsquo;Generative Design&rsquo; <span className="highlight-prepositions">by</span> Bohnacker et al. (page 104-107).</li>
+          <li>EMI detector idea taken <span className="highlight-prepositions">from</span> &lsquo;Environmental Monitoring <span className="highlight-prepositions">with</span> Arduino: Building Simple Devices <span className="highlight-prepositions">to</span> Collect Data <span className="highlight-prepositions">About</span> the World <span className="highlight-prepositions">Around</span> Us&rsquo; <span className="highlight-prepositions">by</span> Gertz et al. (Chapter 4.)</li>
+          <li>Values <span className="highlight-prepositions">for</span> Temporal Flux taken <span className="highlight-prepositions">from</span> &lsquo;The Invisible Landscape&rsquo; <span className="highlight-prepositions">by</span> Terence McKenna (pages 162-163), a full derivation <span className="highlight-prepositions">of</span> <span className="highlight-pronouns">these</span> values is explained <span className="highlight-prepositions">in</span> Chapter 10.</li>
+          <li>Idea <span className="highlight-prepositions">for</span> homemade opto-isolator taken <span className="highlight-prepositions">from</span> &lsquo;Handmade Electronic Music&rsquo; <span className="highlight-prepositions">by</span> Nicolas Collins. Page 181. (My favourite book <span className="highlight-prepositions">at</span> the moment!).</li>
+          <li>Fractal idea adapted <span className="highlight-prepositions">from</span>; http://glsl.heroku.com/e#16063.0, <span className="highlight-conjunctions">and</span> inspired <span className="highlight-prepositions">by</span> http://www.fractalforums.com/new-theories-and-research/very-simple-formula-for-fractal-patterns/</li>
+          <li>Breadboard diagrams created using Fritzing.</li>
+          <li>Project title <span className="highlight-prepositions">from</span> &lsquo;Finnegans Wake&rsquo; <span className="highlight-prepositions">by</span> James Joyce.</li>
+        </ul>
       </div>
     ),
     prevProject: { id: 'i-ching-turntable', title: 'Physical Computing: The I Ching Turntable' }
