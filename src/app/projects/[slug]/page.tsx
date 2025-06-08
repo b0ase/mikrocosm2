@@ -42,21 +42,146 @@ const projects: Record<string, Project> = {
           <a href="https://en.wikipedia.org/wiki/Drum_machine">Wikipedia article</a>.
         </p>
 
+        <p>
+          While I have not replicated the user interface <span className="highlight-prepositions">of</span> the Machinedrum,{' '}
+          I did manage <span className="highlight-prepositions">to</span> find samples <span className="highlight-prepositions">of</span> the sounds{' '}
+          <span className="highlight-prepositions">from</span> <span className="highlight-pronouns">it</span>, these are included{' '}
+          <span className="highlight-prepositions">in</span> the zip file containing the application{' '}
+          <span className="highlight-conjunctions">and</span> source code, found here.
+        </p>
+
+        <p>
+          The technical goal <span className="highlight-prepositions">of</span> the project was{' '}
+          <span className="highlight-prepositions">to</span> further my knowledge <span className="highlight-prepositions">of</span> Max{' '}
+          <span className="highlight-conjunctions">and</span> OpenFrameworks/C++.
+        </p>
+
         <p><strong>Instructions</strong></p>
 
         <p>
           <span className="highlight-prepositions">Before</span> <span className="highlight-pronouns">you</span> get started{' '}
-          <span className="highlight-pronouns">it</span> would probably be a good idea <span className="highlight-prepositions">to</span> watch this
-          demonstration video <span className="highlight-prepositions">to</span> get an idea{' '}
+          <span className="highlight-pronouns">it</span> would probably be a good idea <span className="highlight-prepositions">to</span> watch{' '}
+          <span className="highlight-pronouns">this</span> demonstration video <span className="highlight-prepositions">to</span> get an idea{' '}
           <span className="highlight-prepositions">of</span> the general operation;{' '}
           <a href="https://vimeo.com/84074546">https://vimeo.com/84074546</a>
         </p>
+
+        <p>
+          <span className="highlight-prepositions">To</span> get started open the &ldquo;Start Machinedrum&rdquo; application,{' '}
+          <span className="highlight-pronouns">this</span> will launch <span className="highlight-pronouns">both</span>{' '}
+          &ldquo;MaxMachinedrum&rdquo; <span className="highlight-conjunctions">and</span> &ldquo;OFMachinedrum&rdquo;,{' '}
+          make sure <span className="highlight-prepositions">to</span> wait until they are <span className="highlight-pronouns">both</span> open.
+        </p>
+
+        <p>Here&rsquo;s what the user interface looks like;</p>
 
         <figure className="wp-block-image">
           <a href="/images/Drum-Machine-Interface.jpg" target="_blank">
             <img src="/images/Drum-Machine-Interface.jpg" alt="" />
           </a>
         </figure>
+
+        <p>
+          Now drag <span className="highlight-conjunctions">and</span> drop a sound file{' '}
+          <span className="highlight-prepositions">from</span> the &ldquo;Drum Sound Samples&rdquo; folder{' '}
+          <span className="highlight-prepositions">into</span> <span className="highlight-pronouns">one</span>{' '}
+          <span className="highlight-prepositions">of</span> the &ldquo;Drop sample here&rdquo; boxes{' '}
+          <span className="highlight-prepositions">in</span> the &ldquo;OFMachinedrum&rdquo; window.{' '}
+          The first 10 rows are quantised, rhythms are programmed <span className="highlight-prepositions">into</span>{' '}
+          <span className="highlight-pronouns">these</span> rows <span className="highlight-prepositions">by</span> activating the cells{' '}
+          <span className="highlight-prepositions">by</span> clicking <span className="highlight-prepositions">on</span> them{' '}
+          (yellow/green cells are active, blue/red cells are inactive).{' '}
+          A random sequence can be generated <span className="highlight-prepositions">in</span>{' '}
+          <span className="highlight-pronouns">one</span> <span className="highlight-prepositions">of</span>{' '}
+          <span className="highlight-pronouns">these</span> rows <span className="highlight-prepositions">by</span> clicking{' '}
+          <span className="highlight-prepositions">on</span> <span className="highlight-pronouns">one</span>{' '}
+          <span className="highlight-prepositions">of</span> the &ldquo;Make random sequence&rdquo; buttons.
+        </p>
+
+        <p>
+          The <span className="highlight-pronouns">other</span> 6 rows are <span className="highlight-prepositions">for</span>{' '}
+          non-quantised sequences, <span className="highlight-prepositions">to</span> input a sequence{' '}
+          <span className="highlight-prepositions">in</span> <span className="highlight-pronouns">one</span>{' '}
+          <span className="highlight-prepositions">of</span> <span className="highlight-pronouns">these</span> rows drag{' '}
+          <span className="highlight-conjunctions">and</span> drop a sample <span className="highlight-prepositions">into</span> the appropriate{' '}
+          &lsquo;Drop sample here&rsquo; box <span className="highlight-conjunctions">and</span> then tap{' '}
+          <span className="highlight-prepositions">out</span> the sequence <span className="highlight-prepositions">with</span>{' '}
+          <span className="highlight-pronouns">one</span> <span className="highlight-prepositions">of</span> the keys 1{' '}
+          <span className="highlight-prepositions">to</span> 6. Non-quantised drum triggers can{' '}
+          <span className="highlight-conjunctions">also</span> be set <span className="highlight-prepositions">by</span> clicking anywhere{' '}
+          <span className="highlight-prepositions">in</span> <span className="highlight-pronouns">one</span>{' '}
+          <span className="highlight-prepositions">of</span> the 6 non-quantised rows,{' '}
+          <span className="highlight-conjunctions">and</span> a single non-quantised trigger can be removed{' '}
+          <span className="highlight-prepositions">at</span> any time <span className="highlight-prepositions">by</span> clicking{' '}
+          <span className="highlight-prepositions">on</span> <span className="highlight-pronouns">it</span>.
+        </p>
+
+        <p>
+          <span className="highlight-prepositions">To</span> reset a row, click <span className="highlight-prepositions">on</span> the{' '}
+          &ldquo;Reset row&rdquo; button <span className="highlight-prepositions">to</span> the left{' '}
+          <span className="highlight-prepositions">of</span> the row. <span className="highlight-prepositions">To</span> remove a sample,{' '}
+          click <span className="highlight-prepositions">on</span> the &ldquo;Clear sample&rdquo; button{' '}
+          <span className="highlight-prepositions">to</span> the right <span className="highlight-prepositions">of</span> the row.{' '}
+          If <span className="highlight-pronouns">you</span> drop a sample <span className="highlight-prepositions">into</span> a box{' '}
+          <span className="highlight-pronouns">which</span> already has a sample <span className="highlight-prepositions">in</span>,{' '}
+          the old sample will be replaced. The &ldquo;Reset all rows&rdquo;{' '}
+          <span className="highlight-conjunctions">and</span> &ldquo;Clear all samples&rdquo; buttons do exactly what{' '}
+          <span className="highlight-pronouns">they</span> say <span className="highlight-prepositions">on</span> the tin.
+        </p>
+
+        <p>
+          If <span className="highlight-pronouns">you</span>&rsquo;ve found a rhythm sequence{' '}
+          <span className="highlight-conjunctions">that</span> <span className="highlight-pronouns">you</span> like,{' '}
+          <span className="highlight-pronouns">you</span> can save <span className="highlight-pronouns">it</span>{' '}
+          <span className="highlight-prepositions">in</span> <span className="highlight-pronouns">one</span>{' '}
+          <span className="highlight-prepositions">of</span> the 13 sequence banks{' '}
+          <span className="highlight-prepositions">at</span> the bottom <span className="highlight-prepositions">of</span> the screen,{' '}
+          click <span className="highlight-prepositions">on</span> the top (purple) half{' '}
+          <span className="highlight-prepositions">of</span> the box <span className="highlight-prepositions">to</span> save the sequence,{' '}
+          <span className="highlight-conjunctions">and</span> the bottom half <span className="highlight-prepositions">to</span> retrieve{' '}
+          <span className="highlight-pronouns">it</span>. The sequence banks can be cleared{' '}
+          <span className="highlight-prepositions">by</span> clicking <span className="highlight-prepositions">on</span> the{' '}
+          &ldquo;Clear all saved sequences&rdquo; button. Here is a demonstration{' '}
+          <span className="highlight-prepositions">of</span> recalling multiple patterns;{' '}
+          <a href="https://vimeo.com/84079029">https://vimeo.com/84079029</a>
+        </p>
+
+        <p>
+          (Note: There is <span className="highlight-conjunctions">but</span>{' '}
+          <span className="highlight-pronouns">one</span> mysterious problem{' '}
+          <span className="highlight-prepositions">with</span> the drum machines functionality,{' '}
+          <span className="highlight-pronouns">this</span> regards the retrieval{' '}
+          <span className="highlight-prepositions">of</span> sequences.{' '}
+          <span className="highlight-pronouns">You</span> can see <span className="highlight-pronouns">this</span> a bit{' '}
+          <span className="highlight-prepositions">towards</span> the end{' '}
+          <span className="highlight-prepositions">of</span> <span className="highlight-pronouns">this</span> video.{' '}
+          Sometimes the retrieve sequence button needs <span className="highlight-prepositions">to</span> be hit multiple times{' '}
+          <span className="highlight-prepositions">for</span> the sounds <span className="highlight-prepositions">to</span> be retrieved,{' '}
+          <span className="highlight-pronouns">other</span> times <span className="highlight-pronouns">it</span> works fine.{' '}
+          Sometimes the sounds will disappear if the retrieve button is hit again.{' '}
+          <span className="highlight-pronouns">This</span> remains an unresolved issue.)
+        </p>
+
+        <p>
+          The &lsquo;s&rsquo; key starts <span className="highlight-conjunctions">and</span> stops the drum machine,{' '}
+          <span className="highlight-conjunctions">and</span> the <span className="highlight-prepositions">up</span>{' '}
+          <span className="highlight-conjunctions">and</span> down arrow keys change the tempo respectively.{' '}
+          The tempo is displayed <span className="highlight-prepositions">at</span> the bottom{' '}
+          <span className="highlight-prepositions">of</span> the last row{' '}
+          <span className="highlight-prepositions">in</span> quarter sequences{' '}
+          <span className="highlight-prepositions">per</span> minute, a generic house track{' '}
+          <span className="highlight-prepositions">for</span> example will play{' '}
+          <span className="highlight-prepositions">at</span> around 120-130 quarter sequences{' '}
+          <span className="highlight-prepositions">per</span> minute.
+        </p>
+
+        <p>
+          I hope <span className="highlight-pronouns">you</span> enjoy playing{' '}
+          <span className="highlight-prepositions">with</span> <span className="highlight-pronouns">it</span>{' '}
+          <span className="highlight-conjunctions">as</span> much{' '}
+          <span className="highlight-conjunctions">as</span> I enjoyed making{' '}
+          <span className="highlight-pronouns">it</span>!
+        </p>
 
         <p><strong>Techniques Used</strong></p>
 
@@ -65,6 +190,172 @@ const projects: Record<string, Project> = {
           <span className="highlight-conjunctions">and</span> communicates <span className="highlight-prepositions">with</span> the interface built{' '}
           <span className="highlight-prepositions">with</span> OpenFrameworks using the
           User Datagram Protocol (UDP) <span className="highlight-prepositions">for</span> Open Sound Control (OSC) messages.
+        </p>
+
+        <p>Max patch <span className="highlight-prepositions">in</span> edit mode;</p>
+
+        <figure className="wp-block-image">
+          <a href="/images/Main-Max-Patch.jpg" target="_blank">
+            <img src="/images/Main-Max-Patch.jpg" alt="Max patch in edit mode" />
+          </a>
+        </figure>
+
+        <p>
+          <span className="highlight-prepositions">At</span> the top left hand corner{' '}
+          <span className="highlight-prepositions">of</span> the Max patch is found the [phasor~] object,{' '}
+          <span className="highlight-pronouns">this</span> can be seen{' '}
+          <span className="highlight-conjunctions">as</span> the driving force{' '}
+          <span className="highlight-prepositions">of</span> the whole drum machine. Just{' '}
+          <span className="highlight-prepositions">to</span> the right{' '}
+          <span className="highlight-prepositions">of</span> the [phasor~] is a matrix{' '}
+          <span className="highlight-prepositions">of</span> 10 rows{' '}
+          <span className="highlight-conjunctions">and</span> 16 columns;
+        </p>
+
+        <figure className="wp-block-image">
+          <a href="/images/pic1.jpg" target="_blank">
+            <img src="/images/pic1.jpg" alt="pic1" />
+          </a>
+        </figure>
+
+        <p>
+          The pattern information is fed <span className="highlight-prepositions">from</span> the OpenFrameworks interface{' '}
+          <span className="highlight-prepositions">via</span> OSC messages coming{' '}
+          <span className="highlight-prepositions">into</span> the [p Row Info] subpatch shown here;
+        </p>
+
+        <figure className="wp-block-image">
+          <a href="/images/rowinfo.jpg" target="_blank">
+            <img src="/images/rowinfo.jpg" alt="rowinfo" />
+          </a>
+        </figure>
+
+        <p>
+          The random rows are generated <span className="highlight-prepositions">by</span> the [p Random Row Generator]{' '}
+          <span className="highlight-prepositions">to</span> the top right{' '}
+          <span className="highlight-prepositions">of</span> the matrix.
+        </p>
+
+        <p>
+          The matrix stores pattern information <span className="highlight-conjunctions">and</span> feeds{' '}
+          <span className="highlight-pronouns">this</span> <span className="highlight-prepositions">to</span> an array{' '}
+          <span className="highlight-prepositions">of</span> toggles{' '}
+          <span className="highlight-prepositions">inside</span> the [p Row 1 Drums]{' '}
+          <span className="highlight-prepositions">to</span> [p Row 10 Drums] sub-patches, here is an expanded view{' '}
+          <span className="highlight-prepositions">of</span> <span className="highlight-pronouns">one</span>{' '}
+          <span className="highlight-prepositions">of</span> <span className="highlight-pronouns">these</span> sub-patches;
+        </p>
+
+        <figure className="wp-block-image">
+          <a href="/images/Row.jpg" target="_blank">
+            <img src="/images/Row.jpg" alt="Row" />
+          </a>
+        </figure>
+
+        <p>
+          The non-quantised beats are triggered <span className="highlight-prepositions">by</span> the [p Non-Quantised Row 1]{' '}
+          <span className="highlight-prepositions">to</span> [p Non-Quantised Row 6] sub-patches, here is an expanded view{' '}
+          <span className="highlight-prepositions">of</span> <span className="highlight-pronouns">one</span>{' '}
+          <span className="highlight-prepositions">of</span> <span className="highlight-pronouns">these</span> sub-patches;
+        </p>
+
+        <figure className="wp-block-image">
+          <a href="/images/nq.jpg" target="_blank">
+            <img src="/images/nq.jpg" alt="nq" />
+          </a>
+        </figure>
+
+        <p>
+          Here the non-quantised trigger information is stored{' '}
+          <span className="highlight-prepositions">in</span> the [coll],{' '}
+          <span className="highlight-pronouns">this</span> is given the messages &ldquo;sort&rdquo;,{' '}
+          &ldquo;renumber&rdquo; <span className="highlight-conjunctions">and</span> &ldquo;dump&rdquo;{' '}
+          <span className="highlight-prepositions">in</span> <span className="highlight-conjunctions">that</span> order{' '}
+          <span className="highlight-prepositions">at</span> the start{' '}
+          <span className="highlight-prepositions">of</span> every 16-step sequence.{' '}
+          <span className="highlight-pronouns">This</span> is important{' '}
+          <span className="highlight-conjunctions">as</span> <span className="highlight-pronouns">it</span> keeps the triggers{' '}
+          <span className="highlight-conjunctions">and</span> their corresponding indices{' '}
+          <span className="highlight-prepositions">in</span> the correct (ascending) order.
+        </p>
+
+        <p>
+          There&rsquo;s quite a few interesting little features{' '}
+          <span className="highlight-prepositions">in</span> the Max patch,{' '}
+          <span className="highlight-conjunctions">as</span> well{' '}
+          <span className="highlight-conjunctions">as</span> the OpenFrameworks C++ code{' '}
+          <span className="highlight-conjunctions">so</span> please have a look around the source code files.{' '}
+          <span className="highlight-pronouns">They</span> are all{' '}
+          <span className="highlight-prepositions">in</span> the Creative Coding Machinedrum.zip{' '}
+          <span className="highlight-prepositions">from</span>;{' '}
+          <a href="https://www.dropbox.com/sh/0io3v0fuya1uvim/LO-q3b5Fuj">https://www.dropbox.com/sh/0io3v0fuya1uvim/LO-q3b5Fuj</a>
+        </p>
+
+        <p><strong>Ideas <span className="highlight-prepositions">for</span> further work <span className="highlight-conjunctions">and</span> improvements</strong></p>
+
+        <p>
+          The technical knowledge <span className="highlight-prepositions">of</span>{' '}
+          <span className="highlight-pronouns">these</span> creative coding tools{' '}
+          <span className="highlight-conjunctions">that</span> I have gained{' '}
+          <span className="highlight-prepositions">via</span> <span className="highlight-pronouns">this</span> project should be useful{' '}
+          when <span className="highlight-pronouns">it</span> comes{' '}
+          <span className="highlight-prepositions">to</span> my final Masters project.{' '}
+          <span className="highlight-prepositions">In</span> particular having now had experience{' '}
+          <span className="highlight-prepositions">of</span> getting Max{' '}
+          <span className="highlight-conjunctions">and</span> OpenFrameworks{' '}
+          <span className="highlight-prepositions">to</span> communicate{' '}
+          <span className="highlight-prepositions">with</span> each other using OSC messages will open{' '}
+          <span className="highlight-prepositions">up</span> a myriad{' '}
+          <span className="highlight-prepositions">of</span> possibilities{' '}
+          <span className="highlight-prepositions">for</span> project ideas.
+        </p>
+
+        <p>
+          <span className="highlight-prepositions">With</span> regards{' '}
+          <span className="highlight-prepositions">to</span> the drum machine project itself,{' '}
+          the application could be extended <span className="highlight-prepositions">by</span> adding sampling capabilities,{' '}
+          <span className="highlight-conjunctions">or</span> sound manipulation{' '}
+          <span className="highlight-conjunctions">and</span> effects{' '}
+          <span className="highlight-prepositions">of</span> various forms.{' '}
+          <span className="highlight-pronouns">One</span> simple idea{' '}
+          <span className="highlight-conjunctions">that</span> I thought{' '}
+          <span className="highlight-prepositions">of</span> too late is{' '}
+          <span className="highlight-prepositions">to</span> synchronise the fade-out{' '}
+          <span className="highlight-prepositions">of</span> the colour interface when{' '}
+          <span className="highlight-pronouns">it</span> is stopped{' '}
+          <span className="highlight-prepositions">with</span> a pitch-drop{' '}
+          <span className="highlight-prepositions">on</span> the sounds. I have found{' '}
+          <span className="highlight-pronouns">this</span>{' '}
+          <a href="http://basementhum.blogspot.co.uk/2010/03/pitch-drop-max-for-live-device.html">Max <span className="highlight-prepositions">for</span> Live device</a>{' '}
+          (<a href="https://vimeo.com/10289959">https://vimeo.com/10289959</a>){' '}
+          <span className="highlight-conjunctions">that</span> emulates the pitch drop{' '}
+          <span className="highlight-prepositions">on</span> a vinyl record when{' '}
+          <span className="highlight-pronouns">it</span> is stopped. The Max patch{' '}
+          <span className="highlight-prepositions">behind</span> <span className="highlight-pronouns">it</span> looks like{' '}
+          <span className="highlight-pronouns">this</span>;
+        </p>
+
+        <figure className="wp-block-image">
+          <a href="/images/pitch.jpg" target="_blank">
+            <img src="/images/pitch.jpg" alt="pitch" />
+          </a>
+        </figure>
+
+        <p>
+          The aforementioned issue <span className="highlight-prepositions">with</span> regards{' '}
+          <span className="highlight-prepositions">to</span> retrieving saved patterns is{' '}
+          <span className="highlight-pronouns">one</span> <span className="highlight-conjunctions">that</span> certainly needs addressing.
+        </p>
+
+        <p><strong>References</strong></p>
+
+        <p>
+          – The following OpenFrameworks example projects were used{' '}
+          <span className="highlight-prepositions">for</span> inspiration/manipulated/adulterated/ripped off; oscReceiveExample, oscSenderExample, dragDropExample.
+        </p>
+
+        <p>
+          – Thanks <span className="highlight-prepositions">to</span> Elektron (<a href="http://www.elektron.se/">http://www.elektron.se/</a>)
         </p>
       </div>
     ),
