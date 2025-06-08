@@ -1,26 +1,40 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header id="masthead" className="site-header">
       <div className="site-branding">
-        <p className="site-title">
+        <h1 className="site-title">
           <Link href="/" rel="home">Mikrocosm</Link>
-        </p>
+        </h1>
         <p className="site-description">Projects, both finished and half fini…</p>
       </div>
 
       <nav id="site-navigation" className="main-navigation">
-        <button className="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-          Primary Menu
+        <button 
+          className="menu-toggle" 
+          aria-controls="primary-menu" 
+          aria-expanded={isMenuOpen}
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? 'Close Menu' : 'Primary Menu'}
         </button>
         <div id="primary-menu" className="menu">
-          <ul aria-expanded="false" className="nav-menu">
+          <ul aria-expanded={isMenuOpen} className="nav-menu">
             <li className="page_item page-item-90">
-              <Link href="/">Home page</Link>
+              <Link href="/" className="nav-link">Home page</Link>
             </li>
             <li className="page_item page-item-100">
-              <Link href="/about">This is the about page</Link>
+              <Link href="/about" className="nav-link">This is the about page</Link>
             </li>
           </ul>
         </div>
